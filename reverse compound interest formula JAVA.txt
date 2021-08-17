@@ -1,0 +1,26 @@
+public static void main(String[] args) 
+{
+    double bs=5000, com;
+    
+    System.out.print("\nPlease enter the amount you want to earn and see the sales needed to be done:\n");
+    Scanner in = new Scanner(System.in);
+    double sa = in.nextDouble();       
+    
+    double sales;
+    if (sa>0 && sa<=400)
+    {
+       sales = sa / 0.08;
+       System.out.print("fisrt");
+    }
+    else if (sa>=400.001 && sa<=900)
+    {
+        sales = ((sa-400)/0.1)+(400/0.08);      
+        System.out.print("second");
+    }
+    else
+    {
+        sales = (((sa-(5000*0.08)-(5000*0.1))/0.12) +10000);
+        System.out.print("third");                 
+    }     
+    System.out.print(sales);
+}    
